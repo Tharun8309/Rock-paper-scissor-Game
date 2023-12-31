@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock paper scissor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Rock Paper Scissor Game</h1>
+    <div id="container">
+    <button
+      class="button" id="rock"
+      onclick="let yourchoice='Rock';
+    let compchoice=numberGenerator(); let finalResult=winner(yourchoice,compchoice);
+    showResult(yourchoice,compchoice,finalResult);"
+    >
+      
+    </button>
+    <button
+      class="button"
+      id="paper"
+      onclick="yourchoice='Paper';
+    compchoice=numberGenerator();finalResult=winner(yourchoice,compchoice);
+    showResult(yourchoice,compchoice,finalResult)"
+    >
+      
+    </button>
+    <button
+      class="button" id="scissor"
+      onclick="yourchoice='Scissor';
+    compchoice=numberGenerator();finalResult=winner(yourchoice,compchoice);
+    showResult(yourchoice,compchoice,finalResult)"
+    >
+  </div>
+      
+     
+    </button>
+    <br>
+    <button
+       id="reset"
+      onclick="localStorage.clear();
+    resetScore();  document.querySelector('#user-move').innerText='';
+  document.querySelector('#computer-move').innerText='';
+  document.querySelector('#result').innerText='';
+  document.querySelector('#score').innerText ='';
+"
+    >
+      RESET
+    </button>
+<h3 id="user-move"></h3>
+<h3 id="computer-move"></h3>
+<h3 id="result"></h3>
+<h3 id="score"></h3>
+    <script src="script.js"></script>
+  </body>
+</html>
